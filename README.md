@@ -1,16 +1,31 @@
-# notepad
+# Notepad Flutter App
 
-A new Flutter project.
+## Features
+- Create, edit, and delete notes
+- Save notes using shared preferences
+- Simple and intuitive user interface
 
-## Getting Started
+## Technologies Used
+- Flutter
+- Shared Preferences package
 
-This project is a starting point for a Flutter application.
+## How to Use
+1. Install the app on your device.
+2. Open the app and start creating notes.
+3. Your notes will be saved automatically using shared preferences.
 
-A few resources to get you started if this is your first Flutter project:
+## Code Snippet
+```dart
+// Example code to save and retrieve data using shared preferences
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+void saveData(String key, String value) async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  prefs.setString(key, value);
+}
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Future<String?> getData(String key) async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  return prefs.getString(key);
+}
