@@ -3,12 +3,12 @@ import './utils/apis.dart';
 void main() {
   runApp(
     MaterialApp(
-      title: 'VikVok',
+      title: 'Notepad',
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
-      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.light,
+      darkTheme: ThemeData.light(),
       theme: ThemeData(),
-      home: const HomePage(),
+      home: const MyApp(),
     ),
   );
 }

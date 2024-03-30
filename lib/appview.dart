@@ -1,13 +1,13 @@
 import 'utils/apis.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
 
   @override
-  State<HomePage> createState() => _MyHomePageState();
+  State<MyApp> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<HomePage> {
+class _MyHomePageState extends State<MyApp> {
   int _counter = 0;
 
   void _incrementCounter() {
